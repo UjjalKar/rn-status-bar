@@ -1,4 +1,8 @@
-import { NativeModules, Platform } from 'react-native';
+import {
+  NativeModules,
+  Platform,
+  StatusBar as BaseStatusBar,
+} from 'react-native';
 
 const LINKING_ERROR =
   `The package 'rn-status-bar' doesn't seem to be linked. Make sure: \n\n` +
@@ -17,6 +21,11 @@ const RnStatusBar = NativeModules.RnStatusBar
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return RnStatusBar.multiply(a, b);
+export class StatusBar extends BaseStatusBar {
+  static setBackgroundColorIOS(color: string) {
+    if (Platform.OS !== 'ios') return;
+    RnStatusBar.setStatusBarColor(color);
+  }
 }
+
+export default StatusBar;
