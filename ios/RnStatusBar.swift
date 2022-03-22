@@ -6,16 +6,19 @@ import UIColor_Hex_Swift
 class RnStatusBar: NSObject {
     @objc(setStatusBarColor:)
     func setStatusBarColor(color: String) {
-        if #available(iOS 13.0, *) {
-            let statusBar = UIView()
-            statusBar.frame = UIApplication.shared.statusBarFrame
-            statusBar.backgroundColor = UIColor(color)
-            UIApplication.shared.keyWindow?.addSubview(statusBar)
-            
-        } else {
-            let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView
-            statusBar?.backgroundColor = UIColor(color)
-            
+        DispatchQueue.main.sync  {
+            if #available(iOS 13.0, *) {
+                let statusBar = UIView()
+                statusBar.frame = UIApplication.shared.statusBarFrame
+                statusBar.backgroundColor = UIColor(color)
+                UIApplication.shared.keyWindow?.addSubview(statusBar)
+                
+            } else {
+                let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView
+                statusBar?.backgroundColor = UIColor(color)
+                
+            }
         }
+        
     }
 }
