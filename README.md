@@ -1,7 +1,4 @@
-# rn-status-bar
-
-Ios and Android Status bar color natively
-
+# Change iOS Status Bar Background color natively. Package support Android & iOS.
 ## Installation
 
 ```sh
