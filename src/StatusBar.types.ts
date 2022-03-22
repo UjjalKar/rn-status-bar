@@ -6,7 +6,7 @@ export type StatusBarProps = {
    * Sets the color of the status bar text. Default value is `"default"` which
    * @default 'default'
    */
-   barStyle?: StatusBarStyle;
+  barStyle?: StatusBarStyle;
 
   /**
    * If the transition between status bar property changes should be

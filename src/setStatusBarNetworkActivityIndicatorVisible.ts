@@ -1,4 +1,3 @@
-
 import RnStatusBar from './RNStatusBar';
 
 /**
@@ -6,6 +5,8 @@ import RnStatusBar from './RNStatusBar';
  * @param visible If the network activity indicator should be visible.
  * @platform ios
  */
-export default function setStatusBarNetworkActivityIndicatorVisible(visible: boolean) {
-    RnStatusBar.setNetworkActivityIndicatorVisible(visible);
+export default function setStatusBarNetworkActivityIndicatorVisible(
+  visible: boolean
+) {
+  RnStatusBar.setNetworkActivityIndicatorVisible(visible);
 }
