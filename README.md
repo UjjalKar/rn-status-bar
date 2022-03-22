@@ -44,12 +44,9 @@ import { StyleSheet, View, Text } from 'react-native';
 import { StatusBar } from 'rn-status-bar';
 
 export default function App() {
-  React.useLayoutEffect(() => {
-    StatusBar.setBackgroundColorIOS('#ec4899');
-  }, []);
-
   return (
     <View style={styles.container}>
+      <StatusBar barStyle="light-content" backgroundColor="#557B83" />
       <Text>IOS Status Bar Background Color</Text>
     </View>
   );

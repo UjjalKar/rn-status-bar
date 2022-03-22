@@ -1,8 +1,4 @@
-import {
-  NativeModules,
-  Platform,
-  StatusBar as BaseStatusBar,
-} from 'react-native';
+import { NativeModules, Platform, StatusBar } from 'react-native';
 
 const LINKING_ERROR =
   `The package 'rn-status-bar' doesn't seem to be linked. Make sure: \n\n` +
@@ -10,7 +6,7 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo managed workflow\n';
 
-const RnStatusBar = NativeModules.RnStatusBar
+const RnStatusBarModule = NativeModules.RnStatusBar
   ? NativeModules.RnStatusBar
   : new Proxy(
       {},
@@ -21,11 +17,9 @@ const RnStatusBar = NativeModules.RnStatusBar
       }
     );
 
-export class StatusBar extends BaseStatusBar {
+export default class RnStatusBar extends StatusBar {
   static setBackgroundColorIOS(color: string) {
     if (Platform.OS !== 'ios') return;
-    RnStatusBar.setStatusBarColor(color);
+    RnStatusBarModule.setStatusBarColor(color);
   }
 }
-
-export default StatusBar;
