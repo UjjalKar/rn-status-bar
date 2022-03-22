@@ -245,7 +245,7 @@ PODS:
     - React-Core (= 0.63.4)
     - React-cxxreact (= 0.63.4)
     - React-jsi (= 0.63.4)
-  - rn-status-bar (0.1.3):
+  - rn-status-bar (0.1.4):
     - React-Core
     - UIColor_Hex_Swift (~> 5.1.7)
   - UIColor_Hex_Swift (5.1.7)
@@ -370,7 +370,7 @@ SPEC CHECKSUMS:
   React-RCTText: 5c51df3f08cb9dedc6e790161195d12bac06101c
   React-RCTVibration: ae4f914cfe8de7d4de95ae1ea6cc8f6315d73d9d
   ReactCommon: 73d79c7039f473b76db6ff7c6b159c478acbbb3b
-  rn-status-bar: 6d51e1f93a133a66029756cbbc3be27570eb88e9
+  rn-status-bar: cfa9b79e5e397b5241c1dbf5ea716458840d54c6
   UIColor_Hex_Swift: 31cd3e47440f07a20d2503a36bb0437a445b3c29
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
 
