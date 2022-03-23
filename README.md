@@ -1,4 +1,9 @@
 # Change iOS Status Bar Background color natively. Package support Android & iOS.
+
+## Screenshot
+
+![iOS status bar](https://raw.githubusercontent.com/UjjalKar/rn-status-bar/main/screenshots/S1.png)
+
 ## Installation
 
 ```sh
